@@ -1,0 +1,91 @@
+                                                                                                                                                                                                                                                        <div id="search">
+  <div class="box">
+    <b class="boxHeader">Create Patient</b>
+  </div>
+  <div>
+    To create a new person, enter the person's name and other information below
+    first to double-check that they don't already have a record in the system.
+  </div>
+
+  <div>
+    <form
+      method="get"
+      action="admin/person/addPerson.htm"
+      onsubmit="return validateForm()"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <label for="name"
+                >Patient name:<span class="required">*</span></label
+              >
+            </td>
+            <td>
+              <input
+                aria-describedby="required-description"
+                id="name"
+                type="text"
+              />
+            </td>
+          </tr>
+          <br />
+          <tr>
+            <td>
+              <label for="">Birthdate:<span class="required">*</span></label>
+            </td>
+            <td valign="top">
+              <input aria-describedby="required-description" type="date" />
+              or Age
+              <input aria-describedby="required-description" type="number" />
+            </td>
+          </tr>
+          <br />
+          <tr>
+            <td>
+              <label for="name">Gender:<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="radio" name="gender" value="male" /> Male
+              <input type="radio" name="gender" value="female" /> Female
+            </td>
+            <td>
+              <label for="phone number"
+                >Phone Number:<span class="required">*</span></label
+              >
+            </td>
+            <td>
+              <input
+                aria-describedby="required-description"
+                type="tel"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              />
+            </td>
+            <td>
+              <label for="date created"
+                >Date Created:<span class="required">*</span></label
+              >
+            </td>
+            <td>
+              <input
+                aria-describedby="required-description"
+                type="date"
+                name="creation date"
+              />
+            </td>
+          </tr>
+          <br />
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="Create Person" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="hidden" name="personType" value="patient" />
+      <input type="hidden" name="viewType" value="shortEdit" />
+    </form>
+  </div>
+</div>
